@@ -11,7 +11,16 @@ export function Blog() {
     const [posts, setPosts] = useState<any[]>([]);
 
     useEffect(() => {
-        axios.get(`${API_URL}/posts`).then(res => setPosts(res.data)).catch(console.error);
+        axios.get(`${API_URL}/posts`)
+            .then(res => {
+                if (Array.isArray(res.data)) {
+                    setPosts(res.data);
+                } else {
+                    console.error("Expected array from API, got:", res.data);
+                    setPosts([]);
+                }
+            })
+            .catch(console.error);
     }, []);
 
     return (

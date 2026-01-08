@@ -28,7 +28,12 @@ export const Packages: React.FC = () => {
   useEffect(() => {
     axios.get('/api/promotions')
       .then(res => {
-        setPackages(res.data);
+        if (Array.isArray(res.data)) {
+          setPackages(res.data);
+        } else {
+          console.error("Expected array from API, got:", res.data);
+          setPackages([]);
+        }
         setLoading(false);
       })
       .catch(err => {

@@ -35,6 +35,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use(express.static(path.join(__dirname, '../dist')));
 
 // Initialize DB
 setupDb().then(() => {
@@ -147,6 +148,11 @@ app.post('/api/login', (req, res) => {
         res.status(401).json({ success: false, message: 'Invalid credentials' });
     }
 });
+// Serve React App for any other route (SPA support)
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../dist/index.html'));
+});
+
 
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
