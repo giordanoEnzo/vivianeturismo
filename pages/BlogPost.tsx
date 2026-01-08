@@ -4,6 +4,7 @@ import { Navbar } from '../components/Navbar';
 import { ContactFooter } from '../components/ContactFooter';
 import axios from 'axios';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+import { getImageUrl } from '../config';
 
 export function BlogPost() {
     const { id } = useParams<{ id: string }>();
@@ -11,7 +12,7 @@ export function BlogPost() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/api/posts/${id}`)
+        axios.get(`/api/posts/${id}`)
             .then(res => {
                 setPost(res.data);
                 setLoading(false);
@@ -61,7 +62,7 @@ export function BlogPost() {
                         <div className="relative h-[400px]">
                             {post.image ? (
                                 <img
-                                    src={`http://localhost:3001${post.image}`}
+                                    src={getImageUrl(post.image)}
                                     alt={post.title}
                                     className="w-full h-full object-cover"
                                 />

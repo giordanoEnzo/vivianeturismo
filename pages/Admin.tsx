@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Trash2, Plus, Image as ImageIcon, LogOut } from 'lucide-react';
+import { getImageUrl } from '../config';
 
-const API_URL = 'http://localhost:3001/api';
+const API_URL = '/api';
 
 export function Admin() {
     const [token, setToken] = useState(localStorage.getItem('adminToken') || '');
@@ -366,7 +367,7 @@ function PromotionsManager() {
                             <div key={promo.id} className="relative flex flex-col overflow-hidden rounded-lg border border-gray-200">
                                 <div className="flex-shrink-0 h-48 bg-gray-200">
                                     {promo.image ? (
-                                        <img className="h-48 w-full object-cover" src={`http://localhost:3001${promo.image}`} alt={promo.title} />
+                                        <img className="h-48 w-full object-cover" src={getImageUrl(promo.image)} alt={promo.title} />
                                     ) : (
                                         <div className="h-full flex items-center justify-center text-gray-400">
                                             <ImageIcon className="h-12 w-12" />
@@ -508,7 +509,7 @@ function BlogManager() {
                             <div key={post.id} className="flex items-center space-x-4 p-4 border rounded-lg hover:bg-gray-50">
                                 <div className="flex-shrink-0 h-16 w-16 bg-gray-200 rounded overflow-hidden">
                                     {post.image ? (
-                                        <img className="h-16 w-16 object-cover" src={`http://localhost:3001${post.image}`} alt={post.title} />
+                                        <img className="h-16 w-16 object-cover" src={getImageUrl(post.image)} alt={post.title} />
                                     ) : (
                                         <ImageIcon className="h-8 w-8 m-4 text-gray-400" />
                                     )}

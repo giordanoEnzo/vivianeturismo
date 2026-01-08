@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import { Navbar } from '../components/Navbar';
 import { ContactFooter } from '../components/ContactFooter';
 import axios from 'axios';
+import { getImageUrl } from '../config';
 
-const API_URL = 'http://localhost:3001/api';
+const API_URL = '/api';
 
 export function Blog() {
     const [posts, setPosts] = useState<any[]>([]);
@@ -32,7 +33,7 @@ export function Blog() {
                                 <div className="relative h-48 overflow-hidden">
                                     {post.image ? (
                                         <img
-                                            src={`http://localhost:3001${post.image}`}
+                                            src={getImageUrl(post.image)}
                                             alt={post.title}
                                             className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                                         />

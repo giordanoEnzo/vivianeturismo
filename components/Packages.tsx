@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Clock, MapPin } from 'lucide-react';
 import axios from 'axios';
+import { getImageUrl } from '../config';
 
 interface ApiPackage {
   id: number;
@@ -25,7 +26,7 @@ export const Packages: React.FC = () => {
   const [selectedPackage, setSelectedPackage] = useState<ApiPackage | null>(null);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/api/promotions')
+    axios.get('/api/promotions')
       .then(res => {
         setPackages(res.data);
         setLoading(false);
@@ -36,12 +37,7 @@ export const Packages: React.FC = () => {
       });
   }, []);
 
-  // Helper to get image URL
-  const getImageUrl = (path: string) => {
-    if (!path) return '';
-    if (path.startsWith('http')) return path;
-    return `http://localhost:3001${path}`;
-  };
+
 
   const openModal = (pkg: ApiPackage) => {
     setSelectedPackage(pkg);
