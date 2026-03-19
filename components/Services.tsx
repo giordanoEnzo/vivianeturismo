@@ -1,5 +1,5 @@
 import React from 'react';
-import { Plane, Hotel, Map, ShieldCheck, Headphones, CreditCard } from 'lucide-react';
+import { Plane, Hotel, Map, ShieldCheck, Headphones, CreditCard, Ship, Users, Briefcase } from 'lucide-react';
 import { ServiceItem } from '../types';
 
 const services: ServiceItem[] = [
@@ -32,6 +32,21 @@ const services: ServiceItem[] = [
     icon: <CreditCard size={32} />,
     title: 'Pagamento Facilitado',
     description: 'Parcele sua viagem no cartão ou boleto com condições especiais.'
+  },
+  {
+    icon: <Ship size={32} />,
+    title: 'Cruzeiros',
+    description: 'Explore os mares com as melhores companhias de cruzeiros do mundo.'
+  },
+  {
+    icon: <Users size={32} />,
+    title: 'Grupos',
+    description: 'Roteiros especiais para viagens em grupos, seja família, amigos ou excursões.'
+  },
+  {
+    icon: <Briefcase size={32} />,
+    title: 'Corporativo',
+    description: 'Gestão completa e eficiente de viagens corporativas para sua empresa.'
   }
 ];
 

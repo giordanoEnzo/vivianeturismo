@@ -17,6 +17,7 @@ export const Navbar: React.FC = () => {
 
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-slate-600 hover:text-orange-500 transition-colors font-medium">Início</Link>
+            <Link to="/sobre" className="text-slate-600 hover:text-orange-500 transition-colors font-medium">Sobre Nós</Link>
             <a href="/#packages" className="text-slate-600 hover:text-orange-500 transition-colors font-medium">Pacotes</a>
             <a href="/#services" className="text-slate-600 hover:text-orange-500 transition-colors font-medium">Serviços</a>
             <Link to="/blog" className="text-slate-600 hover:text-orange-500 transition-colors font-medium">Blog</Link>
@@ -38,6 +39,7 @@ export const Navbar: React.FC = () => {
         <div className="md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link to="/" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-700 hover:text-orange-500 font-medium">Início</Link>
+            <Link to="/sobre" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-700 hover:text-orange-500 font-medium">Sobre Nós</Link>
             <a href="/#packages" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-700 hover:text-orange-500 font-medium">Pacotes</a>
             <a href="/#services" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-700 hover:text-orange-500 font-medium">Serviços</a>
             <Link to="/blog" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-700 hover:text-orange-500 font-medium">Blog</Link>
