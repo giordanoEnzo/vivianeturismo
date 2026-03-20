@@ -14,7 +14,7 @@ export const ContactFooter: React.FC = () => {
               <span className="text-3xl font-light text-orange-500 ml-1">TURISMO</span>
             </div>
             <p className="text-slate-400 leading-relaxed max-w-md">
-              Transformamos sonhos em memórias. Nossa missão é proporcionar experiências de viagem únicas, seguras e inesquecíveis para você e sua família. Especialistas em roteiros nacionais e internacionais.
+              Transformamos sonhos em memórias. Nossa missão é proporcionar experiências de viagens únicas, seguras e inesquecíveis para você e sua família. Especialistas em roteiros nacionais e internacionais.
             </p>
             <div className="flex space-x-4 pt-2">
               <a href="https://www.instagram.com/viviane_turismo_viagens" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-orange-500 transition-all duration-300 transform hover:scale-110 shadow-lg">
