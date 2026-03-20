@@ -27,19 +27,19 @@ export function About() {
             </div>
             
             <div className="w-full lg:w-1/2 space-y-6 text-lg text-slate-700 leading-relaxed">
-              <p>
+              <p className="text-justify">
                 A Viviane Turismo nasceu da experiência e da paixão por viagens de sua fundadora, Viviane Nascimento, que acumula mais de 25 anos de atuação na organização e gestão de viagens.
               </p>
               
-              <p>
+              <p className="text-justify">
                 Ao longo de sua carreira como secretária executiva, Viviane foi responsável pelo planejamento completo de deslocamentos de CEOs, presidentes e colaboradores, cuidando de cada etapa com excelência — desde a saída de suas residências ou empresas até o retorno. Sempre com um acompanhamento próximo e atento, garantiu viagens seguras, organizadas e eficientes, tanto no Brasil quanto no exterior, em contextos corporativos e de lazer.
               </p>
               
-              <p>
+              <p className="text-justify">
                 Com essa sólida bagagem, a Viviane Turismo surge com o propósito de oferecer uma consultoria de viagens personalizada, unindo conhecimento, cuidado e atenção aos detalhes para proporcionar experiências únicas.
               </p>
               
-              <p className="font-semibold text-xl text-slate-900 border-l-4 border-orange-500 pl-6 mt-8 italic">
+              <p className="font-semibold text-xl text-slate-900 border-l-4 border-orange-500 pl-6 mt-8 italic text-justify">
                 Mais do que planejar viagens, a Viviane Turismo se dedica a "transformar sonhos em memórias" inesquecíveis, com atendimento próximo, confiança e excelência em cada roteiro.
               </p>
             </div>

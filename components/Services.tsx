@@ -19,21 +19,6 @@ const services: ServiceItem[] = [
     description: 'Viagens desenhadas sob medida para o seu perfil e orçamento.'
   },
   {
-    icon: <ShieldCheck size={32} />,
-    title: 'Seguro Viagem',
-    description: 'Viaje tranquilo com as melhores coberturas do mercado.'
-  },
-  {
-    icon: <Headphones size={32} />,
-    title: 'Suporte 24h',
-    description: 'Estaremos com você via WhatsApp durante toda a sua viagem.'
-  },
-  {
-    icon: <CreditCard size={32} />,
-    title: 'Pagamento Facilitado',
-    description: 'Parcele sua viagem no cartão ou boleto com condições especiais.'
-  },
-  {
     icon: <Ship size={32} />,
     title: 'Cruzeiros',
     description: 'Explore os mares com as melhores companhias de cruzeiros do mundo.'
@@ -47,6 +32,21 @@ const services: ServiceItem[] = [
     icon: <Briefcase size={32} />,
     title: 'Corporativo',
     description: 'Gestão completa e eficiente de viagens corporativas para sua empresa.'
+  },
+  {
+    icon: <ShieldCheck size={32} />,
+    title: 'Seguro Viagem',
+    description: 'Viaje tranquilo com as melhores coberturas do mercado.'
+  },
+  {
+    icon: <Headphones size={32} />,
+    title: 'Suporte 24h',
+    description: 'Estaremos com você via WhatsApp durante toda a sua viagem.'
+  },
+  {
+    icon: <CreditCard size={32} />,
+    title: 'Pagamento Facilitado',
+    description: 'Parcele sua viagem no cartão ou boleto com condições especiais.'
   }
 ];
 
