@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 // Ensure uploads directory exists
-const uploadDir = path.join(__dirname, 'uploads');
+const uploadDir = process.env.UPLOAD_DIR || path.join(__dirname, 'uploads');
 if (!fs.existsSync(uploadDir)) {
     fs.mkdirSync(uploadDir);
 }
@@ -34,7 +34,7 @@ const storage = multer.diskStorage({
 })
 const upload = multer({ storage: storage });
 
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use('/uploads', express.static(uploadDir));
 app.use(express.static(path.join(__dirname, '../dist')));
 
 // Initialize DB
